@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+   .tiburon-slider-item {
+      .wp-block-columns {
+         .wp-block-column {
+            .wp-block-cover {
+               min-height: 15rem !important;
+            }
+         }
+      }
+   }
+}

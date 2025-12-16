@@ -1,0 +1,98 @@
+.editor-styles-wrapper {
+   .edit-post-visual-editor__post-title-wrapper {
+      margin: 0 !important;
+      background: #fff;
+      color: #000;
+      border-bottom: 2px solid var(--wp-admin-theme-color, #007cba);
+      height: 100%;
+      max-height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+.full-width-control {
+   width: 100%;
+}
+
+.is-w-full {
+   width: 100%;
+   > img {
+      width: 100% !important;
+   }
+}
+
+.is-h-full {
+   height: 100%;
+   > img {
+      height: 100%;
+   }
+}
+
+@media screen and (max-width: 781px) {
+   .is-hidden-mobile {
+      display: none !important;
+   }
+}
+
+@media screen and (min-width: 782px) {
+   .is-hidden-desktop {
+      display: none !important;
+   }
+}
+.is-hidden {
+   display: none !important;
+}
+
+.is-overflow-x {
+   overflow-x: auto;
+}
+
+// Make sure headings inherit Group color value
+.wp-block-group {
+   &.has-text-color {
+      .wp-block-heading:not(.has-text-color) {
+         color: inherit !important;
+      }
+   }
+}
+.without_ampm::-webkit-datetime-edit-ampm-field {
+   display: none;
+}
+input[type="time"]::-webkit-datetime-edit-ampm-field {
+   display: none;
+}
+
+.open-menu-wrapper {
+   opacity: 1 !important;
+   visibility: visible !important;
+   > .wp-block-group {
+      right: 0 !important;
+   }
+}
+
+.editor-styles-wrapper {
+   .wp-block-button.is-style-menu-btn:has(.wp-block-button__link > span) {
+      background-color: transparent !important;
+      border-color: transparent !important;
+      height: 14px;
+      width: 34px;
+      cursor: pointer;
+      span {
+         display: none;
+      }
+      .wp-block-button__link {
+         display: none;
+      }
+      &::before {
+         content: url('data:image/svg+xml,<svg width="30" height="10" viewBox="0 0 30 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 0V2H0V0H30Z" fill="%23303030"/><path d="M30 8V10H0V8H30Z" fill="%23303030"/></svg>');
+         display: flex;
+
+         background: transparent;
+         transition: all 0.2s;
+         height: 10px;
+         width: 30px;
+         padding: 2px;
+      }
+   }
+}

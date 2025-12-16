@@ -1,0 +1,26 @@
+.swiper-navigation {
+   display: flex;
+   justify-content: flex-start;
+   gap: 10px;
+   position: absolute;
+   bottom: 0;
+   left: var(--wp--preset--spacing--3-75);
+   right: var(--wp--preset--spacing--3-75);
+   padding-bottom: 2.5rem;
+   width: 100%;
+   z-index: 10;
+}
+
+.swiper-navigation button {
+   padding: 0.75rem;
+   cursor: pointer;
+   background: transparent;
+   color: #572f1e;
+   border: 1px solid #572f1e;
+   border-radius: 0;
+}
+
+.swiper-navigation button:hover {
+   background: #572f1e;
+   color: #fff;
+}

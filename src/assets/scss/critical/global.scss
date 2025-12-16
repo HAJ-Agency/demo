@@ -1,0 +1,262 @@
+.margin-offset-gap-8-left {
+   margin-left: calc(0px - calc(var(--wp--preset--spacing--8) * 0.5));
+   margin-right: calc(0px - calc(var(--wp--style--root--padding-right)));
+}
+.margin-offset-gap-8-right {
+   margin-right: calc(0px - calc(var(--wp--preset--spacing--8) * 0.5));
+   margin-left: calc(0px - calc(var(--wp--style--root--padding-right)));
+}
+
+.cz-index-1 {
+   z-index: 1;
+}
+
+.cz-index-2 {
+   z-index: 2;
+}
+
+.cz-index-3 {
+   z-index: 3;
+}
+
+.cz-index-4 {
+   z-index: 4;
+}
+
+.cz-index-5 {
+   z-index: 5;
+}
+
+.is-w-full {
+   width: 100%;
+   > img {
+      width: 100% !important;
+   }
+}
+
+.is-h-full {
+   height: 100%;
+   > img {
+      height: 100%;
+   }
+}
+
+.is-hidden {
+   display: none !important;
+}
+
+@media (max-width: 781px) {
+   .margin-offset-gap-8-left,
+   .margin-offset-gap-8-right {
+      margin-left: 0;
+      margin-right: 0;
+   }
+   .mobile-min-height-30 {
+      min-height: 30rem !important;
+   }
+   .is-hidden-mobile {
+      display: none !important;
+   }
+}
+
+@media screen and (min-width: 782px) {
+   .is-hidden-desktop {
+      display: none !important;
+   }
+}
+
+.custom-logo {
+   width: 90px !important;
+}
+
+// Home page: column turns green on hover
+.image-column-hover {
+   transition: background-color 0.3s ease;
+   // transition: transform 0.3s ease;
+   .wp-block-image {
+      transition: transform 0.3s ease;
+   }
+   &:hover {
+      background-color: var(--wp--preset--color--pale-green) !important;
+      .wp-block-image {
+         // zoom: 1.05;
+         transform: scale(1.05);
+      }
+   }
+}
+
+// Blob image
+@media (max-width: 781px) {
+   .blob-overlay-image {
+      img {
+         width: 400px;
+      }
+   }
+}
+
+// Akka logo on green hills image (frontpage)
+.logo-absolute {
+   width: 100px;
+   position: absolute;
+   bottom: -15px;
+   left: 5px;
+   @media (max-width: 600px) {
+      bottom: 5px;
+      left: 0;
+      width: 85px;
+   }
+}
+
+// Paragraphs with inline image (white Akka logo)
+p {
+   &:has(img[class*="wp-image-"]) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem;
+
+      @media screen and (max-width: 781px) {
+         align-items: flex-start;
+      }
+   }
+   &.center {
+      align-items: center !important;
+   }
+}
+
+// Cards with texts showing on hover (Section: Expected benefits)
+// .hover-card-columns > .wp-block-column {
+//    flex: 1 1 calc(25% - 2em);
+//    box-sizing: border-box;
+// }
+.hover-card {
+   // position: relative;
+   // overflow: hidden;
+   // aspect-ratio: 4 / 5;
+   transition: all 0.4s ease;
+   min-height: 380px;
+
+   @media (min-width: 1480px) {
+      min-height: 450px;
+   }
+   @media (min-width: 1600px) {
+      min-height: 500px;
+   }
+
+   .wp-block-cover__image-background {
+      transition: opacity 0.4s ease;
+   }
+   &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--wp--preset--color--grey);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 1;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   .wp-block-cover__inner-container {
+      // position: relative;
+      z-index: 2;
+      // text-align: left;
+
+      .info {
+         opacity: 0;
+         transition: opacity 0.3s ease;
+      }
+      .tag {
+         position: absolute;
+         display: inline-block;
+         white-space: nowrap;
+         @media (max-width: 1480px) {
+            font-size: 1rem !important;
+         }
+      }
+   }
+
+   &:hover {
+      .wp-block-cover__image-background {
+         opacity: 0;
+      }
+      .info {
+         opacity: 1;
+      }
+      .tag {
+         opacity: 0;
+      }
+   }
+}
+@media (max-width: 1150px) {
+   .hover-card-columns {
+      flex-wrap: wrap !important;
+   }
+
+   .hover-card-columns > .wp-block-column {
+      flex: 1 1 calc(50% - 1em) !important;
+      max-width: calc(50% - 1em) !important;
+      box-sizing: border-box;
+   }
+}
+
+@media (max-width: 937px) {
+   .hover-card-columns > .wp-block-column {
+      flex: 1 1 100% !important;
+      max-width: 100% !important;
+   }
+}
+
+// Testimonial section (home page)
+.testimonials {
+   .wp-block-cover__inner-container {
+      width: 100% !important;
+
+      @media screen and (min-width: 782px) {
+         .wp-block-columns {
+            justify-content: flex-end;
+         }
+      }
+
+      .stars {
+         .wp-block-image {
+            img {
+               vertical-align: initial;
+            }
+         }
+      }
+   }
+}
+
+// "Born from necessity" (home page)
+.about-us-columns {
+   // align-items: stretch !important;
+   // max-height: 100vh;
+
+   // .about-us-column-left {
+   //    .wp-block-image {
+   //       position: relative;
+   //       width: 100% !important;
+   //       aspect-ratio: 1 / 1;
+   //       overflow: hidden;
+   //       img {
+   //          width: 100%;
+   //          height: 100%;
+   //          object-fit: cover;
+   //          display: block;
+   //       }
+   //    }
+   // }
+   .about-us-column-right {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      // column-gap: 1rem;
+      // .wp-block-image {
+      //    &.about-us-column-right-picture {
+      //       width: 80%;
+      //    }
+      // }
+   }
+}

@@ -1,0 +1,612 @@
+{
+   "version": 3,
+   "$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+   "settings": {
+      "layout": {
+         "contentSize": "1870px",
+         "wideSize": "1920px"
+      },
+      "color": {
+         "defaultPalette": false,
+         "palette": [
+            {
+               "name": "White",
+               "slug": "white",
+               "color": "#FFFFFF"
+            },
+            {
+               "name": "Black",
+               "slug": "black",
+               "color": "#000000"
+            },
+            {
+               "name": "Brown",
+               "slug": "brown",
+               "color": "#493221"
+            },
+            {
+               "name": "Pale green",
+               "slug": "pale-green",
+               "color": "#D2DCC7"
+            },
+            {
+               "name": "Dark green",
+               "slug": "dark-green",
+               "color": "#00B21E"
+            },
+            {
+               "name": "Grey",
+               "slug": "grey",
+               "color": "#F5F5F5"
+            }
+         ]
+      },
+      "spacing": {
+         "defaultSpacingSizes": false,
+         "spacingSizes": [
+            {
+               "name": "0.75rem",
+               "size": "0.75rem",
+               "slug": "0-75"
+            },
+            {
+               "name": "1rem",
+               "size": "1rem",
+               "slug": "1"
+            },
+            {
+               "name": "1.25rem",
+               "size": "clamp(0.75rem, 0.393rem + 0.952vw, 1.25rem)",
+               "slug": "1-25"
+            },
+            {
+               "name": "1.5rem",
+               "size": "clamp(1rem, 0.643rem + 0.952vw, 1.5rem)",
+               "slug": "1-50"
+            },
+            {
+               "name": "1.75rem",
+               "size": "clamp(1rem, 0.464rem + 1.429vw, 1.75rem)",
+               "slug": "1-75"
+            },
+            {
+               "name": "1.875rem",
+               "size": "clamp(1rem, 0.5rem + 2vw, 1.875rem)",
+               "slug": "1-875"
+            },
+            {
+               "name": "2.5rem",
+               "size": "clamp(1.5rem, 0.786rem + 1.905vw, 2.5rem)",
+               "slug": "2-50"
+            },
+            {
+               "name": "3rem",
+               "size": "clamp(2rem, 1.286rem + 1.905vw, 3rem)",
+               "slug": "3"
+            },
+            {
+               "name": "4rem",
+               "size": "clamp(3rem, 2.286rem + 1.905vw, 4rem)",
+               "slug": "4"
+            },
+            {
+               "name": "4.375rem",
+               "size": "clamp(3rem, 2.107rem + 2.381vw, 4.375rem)",
+               "slug": "4-375"
+            },
+            {
+               "name": "6.25rem",
+               "size": "clamp(3rem, 0.679rem + 6.19vw, 6.25rem)",
+               "slug": "6-25"
+            }
+         ],
+         "spacingScale": {
+            "steps": 1
+         },
+         "units": ["%", "px", "em", "rem", "vh", "vw"]
+      },
+      "typography": {
+         "writingMode": false,
+         "defaultFontSizes": false,
+         "fluid": false,
+         "fontFamilies": [
+            {
+               "fontFamily": "Helvetica Neue",
+               "name": "Helvetica Neue",
+               "slug": "body",
+               "fontFace": [
+                  {
+                     "fontFamily": "Helvetica Neue",
+                     "fontStretch": "normal",
+                     "fontStyle": "normal",
+                     "fontWeight": "400",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Helvetica/HelveticaNeue-Regular.woff2", "file:./includes/fonts/Helvetica/HelveticaNeue-Regular.otf"]
+                  },
+                  {
+                     "fontFamily": "Helvetica Neue",
+                     "fontStretch": "normal",
+                     "fontStyle": "italic",
+                     "fontWeight": "400",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Helvetica/HelveticaNeue-Italic.woff2", "file:./includes/fonts/Helvetica/HelveticaNeue-Italic.otf"]
+                  },
+                  {
+                     "fontFamily": "Helvetica Neue",
+                     "fontStretch": "normal",
+                     "fontStyle": "normal",
+                     "fontWeight": "700",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Helvetica/HelveticaNeue-Bold.woff2", "file:./includes/fonts/Helvetica/HelveticaNeue-Bold.otf"]
+                  },
+                  {
+                     "fontFamily": "Helvetica Neue",
+                     "fontStretch": "normal",
+                     "fontStyle": "italic",
+                     "fontWeight": "700",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Helvetica/HelveticaNeue-BoldItalic.woff2", "file:./includes/fonts/Helvetica/HelveticaNeue-BoldItalic.otf"]
+                  },
+                  {
+                     "fontFamily": "Helvetica Neue",
+                     "fontStretch": "normal",
+                     "fontStyle": "normal",
+                     "fontWeight": "300",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Helvetica/HelveticaNeue-Light.woff2", "file:./includes/fonts/Helvetica/HelveticaNeue-Light.otf"]
+                  },
+                  {
+                     "fontFamily": "Helvetica Neue",
+                     "fontStretch": "normal",
+                     "fontStyle": "italic",
+                     "fontWeight": "300",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Helvetica/HelveticaNeue-LightItalic.woff2", "file:./includes/fonts/Helvetica/HelveticaNeue-LightItalic.otf"]
+                  }
+               ]
+            },
+            {
+               "fontFamily": "Georgia",
+               "name": "Georgia",
+               "slug": "heading",
+               "fontFace": [
+                  {
+                     "fontFamily": "Georgia",
+                     "fontStretch": "normal",
+                     "fontStyle": "normal",
+                     "fontWeight": "400",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Georgia/Georgia-Regular.woff2", "file:./includes/fonts/Georgia/Georgia-Regular.ttf"]
+                  },
+                  {
+                     "fontFamily": "Georgia",
+                     "fontStretch": "normal",
+                     "fontStyle": "italic",
+                     "fontWeight": "400",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Georgia/Georgia-Italic.woff2", "file:./includes/fonts/Georgia/Georgia-Italic.ttf"]
+                  },
+                  {
+                     "fontFamily": "Georgia",
+                     "fontStretch": "normal",
+                     "fontStyle": "normal",
+                     "fontWeight": "700",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Georgia/Georgia-Bold.woff2", "file:./includes/fonts/Georgia/Georgia-Bold.ttf"]
+                  },
+                  {
+                     "fontFamily": "Georgia",
+                     "fontStretch": "normal",
+                     "fontStyle": "italic",
+                     "fontWeight": "700",
+                     "fontDisplay": "swap",
+                     "src": ["file:./includes/fonts/Georgia/Georgia-BoldItalic.woff2", "file:./includes/fonts/Georgia/Georgia-BoldItalic.ttf"]
+                  }
+               ]
+            }
+         ],
+         "fontSizes": [
+            {
+               "name": "Text 1",
+               "slug": "0-875",
+               "size": "0.875rem",
+               "fluid": false
+            },
+            {
+               "name": "Text 2",
+               "slug": "0-9375",
+               "size": "0.9375rem",
+               "fluid": false
+            },
+            {
+               "name": "Text 3",
+               "slug": "1",
+               "size": "1rem",
+               "fluid": {
+                  "min": "0.875rem",
+                  "max": "1rem"
+               }
+            },
+            {
+               "name": "Text 4 (default)",
+               "slug": "1-125",
+               "size": "1.125rem",
+               "fluid": {
+                  "min": "1rem",
+                  "max": "1.125rem"
+               }
+            },
+            {
+               "name": "Text 5",
+               "slug": "1-25",
+               "size": "1.25rem",
+               "fluid": {
+                  "min": "1rem",
+                  "max": "1.25rem"
+               }
+            },
+            {
+               "name": "Text 6",
+               "slug": "1-375",
+               "size": "1.375rem",
+               "fluid": {
+                  "min": "1.125rem",
+                  "max": "1.375rem"
+               }
+            },
+            {
+               "name": "Text 7",
+               "slug": "1-50",
+               "size": "1.5rem",
+               "fluid": {
+                  "min": "1.175rem",
+                  "max": "1.5rem"
+               }
+            },
+            {
+               "name": "X Small Heading",
+               "slug": "1-75",
+               "size": "1.75rem",
+               "fluid": {
+                  "min": "1.375rem",
+                  "max": "1.75rem"
+               }
+            },
+            {
+               "name": "Small Heading",
+               "slug": "2",
+               "size": "2rem",
+               "fluid": {
+                  "min": "1.475rem",
+                  "max": "2rem"
+               }
+            },
+            {
+               "name": "Medium Heading",
+               "slug": "2-125",
+               "size": "2.125rem",
+               "fluid": {
+                  "min": "1.5rem",
+                  "max": "2.125rem"
+               }
+            },
+            {
+               "name": "Large Heading",
+               "slug": "2-375",
+               "size": "2.375rem",
+               "fluid": {
+                  "min": "1.75rem",
+                  "max": "2.375rem"
+               }
+            },
+            {
+               "name": "X Large Heading",
+               "slug": "3",
+               "size": "3rem",
+               "fluid": {
+                  "min": "2rem",
+                  "max": "3rem"
+               }
+            },
+            {
+               "name": "XX Large Heading",
+               "slug": "3-125",
+               "size": "3.125rem",
+               "fluid": {
+                  "min": "2.25rem",
+                  "max": "3.125rem"
+               }
+            }
+         ]
+      },
+      "position": {
+         "sticky": false
+      }
+   },
+   "styles": {
+      "css": "*{text-underline-offset: 0.2em;} strong{font-weight: 700;} :focus-visible {outline: 2px dotted currentColor; outline-offset: 4px;}",
+      "spacing": {
+         "blockGap": "0",
+         "padding": {
+            "left": "var:preset|spacing|1-75",
+            "right": "var:preset|spacing|1-75"
+         },
+         "margin": {
+            "top": "0",
+            "bottom": "0"
+         }
+      },
+      "color": {
+         "background": "var:preset|color|white",
+         "text": "var:preset|color|black"
+      },
+      "typography": {
+         "fontFamily": "var:preset|font-family|body",
+         "fontSize": "var:preset|font-size|1-125",
+         "fontStyle": "normal",
+         "fontWeight": "300",
+         "lineHeight": "1.2",
+         "letterSpacing": "0.02em"
+      },
+      "elements": {
+         "heading": {
+            "typography": {
+               "fontFamily": "var:preset|font-family|heading",
+               "fontWeight": "400"
+            }
+         },
+         "h1": {
+            "typography": {
+               "fontSize": "var:preset|font-size|3",
+               "lineHeight": "1.2",
+               "letterSpacing": "0.02em"
+            },
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "1rem"
+               }
+            }
+         },
+         "h2": {
+            "typography": {
+               "fontSize": "var:preset|font-size|2-125",
+               "lineHeight": "1.2",
+               "letterSpacing": "0.02em"
+            },
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "1rem"
+               }
+            }
+         },
+         "h3": {
+            "typography": {
+               "fontSize": "var:preset|font-size|1-75",
+               "lineHeight": "1.2",
+               "letterSpacing": "0.02em",
+               "textTransform": "none"
+            },
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "1rem"
+               }
+            }
+         },
+         "h4": {
+            "typography": {
+               "fontSize": "var:preset|font-size|1-50",
+               "lineHeight": "1.2",
+               "letterSpacing": "0.02em"
+            },
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "1rem"
+               }
+            }
+         },
+         "h5": {
+            "typography": {
+               "fontSize": "var:preset|font-size|1-375",
+               "lineHeight": "1.2",
+               "letterSpacing": "0.02em"
+            },
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "0.875rem"
+               }
+            }
+         },
+         "h6": {
+            "typography": {
+               "fontSize": "var:preset|font-size|1-25",
+               "lineHeight": "1.2",
+               "letterSpacing": "0.02em"
+            },
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "0.875rem"
+               }
+            }
+         },
+         "button": {
+            "border": {
+               "radius": "999px",
+               "color": "var:preset|color|black"
+            },
+            "typography": {
+               "fontWeight": "400",
+               "fontSize": "var:preset|font-size|1-125",
+               "fontFamily": "var:preset|font-family|body",
+               "textTransform": "none",
+               "lineHeight": "1.1",
+               "textAlign": "center",
+               "letterSpacing": ".03em"
+            },
+            "color": {
+               "background": "transparent",
+               "text": "var:preset|color|black"
+            },
+            "spacing": {
+               "padding": {
+                  "top": "0.675rem",
+                  "right": "2rem",
+                  "bottom": "0.675rem",
+                  "left": "2rem"
+               }
+            },
+            ":hover": {
+               "color": {
+                  "background": "var:preset|color|black",
+                  "text": "var:preset|color|white"
+               },
+               "border": {
+                  "color": "var:preset|color|black"
+               }
+            },
+            ":focus": {
+               "color": {
+                  "background": "var:preset|color|black",
+                  "text": "var:preset|color|white"
+               },
+               "border": {
+                  "color": "var:preset|color|black"
+               }
+            },
+            ":active": {
+               "color": {
+                  "background": "var:preset|color|white",
+                  "text": "var:preset|color|black"
+               },
+               "border": {
+                  "color": "var:preset|color|white"
+               }
+            }
+         },
+         "link": {
+            "css": "transition: color 0.25s ease",
+            "typography": {
+               "textDecoration": "underline"
+            },
+            "color": {
+               "text": "inherit"
+            },
+            "border": {
+               "bottom": {
+                  "width": "0px"
+               }
+            },
+            ":hover": {
+               "typography": {
+                  "textDecoration": "underline"
+               },
+               "border": {
+                  "bottom": {
+                     "width": "0px"
+                  }
+               },
+               "color": {
+                  "text": "var:preset|color|dark-green"
+               }
+            }
+         }
+      },
+      "blocks": {
+         "core/heading": {
+            "typography": {
+               "fontWeight": "400"
+            },
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "1rem"
+               }
+            }
+         },
+         "core/paragraph": {
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "1.25rem"
+               }
+            }
+         },
+         "core/buttons": {
+            "spacing": {
+               "margin": {
+                  "top": "1.25rem",
+                  "bottom": "1rem"
+               },
+               "blockGap": "0.875rem"
+            }
+         },
+         "core/button": {
+            "variations": {
+               "outline-white": {
+                  "border": {
+                     "color": "var:preset|color|white"
+                  },
+                  "color": {
+                     "background": "transparent",
+                     "text": "var:preset|color|white"
+                  }
+               },
+               "fill-white": {
+                  "border": {
+                     "color": "var:preset|color|white"
+                  },
+                  "color": {
+                     "background": "var:preset|color|white",
+                     "text": "var:preset|color|black"
+                  }
+               },
+               "fill-black": {
+                  "border": {
+                     "color": "var:preset|color|black"
+                  },
+                  "color": {
+                     "background": "var:preset|color|black",
+                     "text": "var:preset|color|white"
+                  }
+               }
+            }
+         },
+         "core/separator": {
+            "border": {
+               "top": {
+                  "width": "0.00625rem !important"
+               }
+            }
+         },
+         "core/list": {
+            "spacing": {
+               "margin": {
+                  "top": "1rem",
+                  "bottom": "1rem"
+               },
+               "padding": {
+                  "left": "2rem"
+               }
+            }
+         },
+         "core/list-item": {
+            "spacing": {
+               "margin": {
+                  "top": "0",
+                  "bottom": "0.5rem"
+               }
+            }
+         },
+         "core/columns": {
+            "spacing": {
+               "blockGap": "var(--wp--preset--spacing--3) var(--wp--preset--spacing--6-25)"
+            }
+         }
+      }
+   }
+}

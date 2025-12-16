@@ -1,0 +1,18 @@
+{
+   "name": "tiburon/slider",
+   "version": "1.0.1",
+   "textdomain": "tiburon",
+   "editorScript": "file:./index.js",
+   "viewScript": "file:./viewScript.js",
+   "editorStyle": "file:./index.css",
+   "render": "file:./render.php",
+   "style": "file:./style-index.css",
+   "attributes": {
+      "blockId": {
+         "type": "string"
+      },
+      "mainClassName": {
+         "type": "string"
+      }
+   }
+}

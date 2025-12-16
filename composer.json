@@ -1,0 +1,26 @@
+{
+   "type": "akka",
+   "autoload": {
+      "psr-4": {
+         "Akka\\Includes\\Curl\\": "includes/curl/",
+         "Akka\\Includes\\WPCLI\\": "includes/wp-cli/",
+         "Akka\\Includes\\WooCommerce\\": "includes/woocommerce/"
+      },
+      "files": [
+         "includes/hooks/actions.php",
+         "includes/hooks/filters.php",
+         "includes/api/hapi.php",
+         "includes/functions/faq.php",
+         "includes/functions/post-type.php",
+         "includes/functions/reseller.php",
+         "includes/functions/wc-taxonomies.php",
+         "includes/functions/ingredients.php",
+         "includes/block-styles/core-button.php",
+         "includes/wp-cli/init.php",
+         "includes/woocommerce/init.php"
+      ]
+   },
+   "require": {
+      "guzzlehttp/guzzle": "^7.0"
+   }
+}

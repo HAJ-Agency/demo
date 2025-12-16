@@ -1,0 +1,38 @@
+.wc-accordion-repeater,
+.wc-variation-repeater {
+   display: grid;
+   gap: 12px;
+   .form-field {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+.wc-accordion-row,
+.wc-var-row {
+   margin: 8px 0;
+   padding: 12px;
+   border: 1px solid #dcdcde;
+   border-radius: 6px;
+   background: #fff;
+}
+
+.wc-accordion-label {
+   display: block;
+   margin-bottom: 6px;
+   font-weight: 600;
+}
+
+.wc-variation-title {
+   margin: 8px 0 4px;
+}
+
+// quicktags/textarea fallback (outside TinyMCE iframe)
+.wc-var-row .wp-editor-area,
+.js .tmce-active .wp-editor-area {
+   color: #1e1e1e !important;
+   background: #fff !important;
+}
+.wc-var-row .wp-switch-editor {
+   color: #1e1e1e;
+}

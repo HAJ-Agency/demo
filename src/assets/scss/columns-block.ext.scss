@@ -1,0 +1,25 @@
+.wp-block-columns.has-column-divider {
+   display: flex;
+
+   .wp-block-column {
+      position: relative;
+   }
+
+   // Add the divider inside the gap space
+   .wp-block-column:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: calc(-0.5 * var(--wp--columns-horizontal-gap, 2rem));
+      width: var(--column-divider-width, 1px);
+      height: 100%;
+      background-color: var(--column-divider-color, #000);
+   }
+
+   // Mobile: remove the divider when stacking
+   @media (max-width: 768px) {
+      .wp-block-column::after {
+         content: none !important;
+      }
+   }
+}

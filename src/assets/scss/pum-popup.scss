@@ -1,0 +1,15 @@
+html {
+   &.pum-open.pum-open-overlay.pum-open-scrollable {
+      .pum-overlay.pum-active {
+         overflow-y: auto !important;
+      }
+      body > :not([aria-modal="true"]) {
+         padding-right: 0 !important;
+      }
+      @media screen and (max-width: 600px) {
+         .pum-container {
+            padding: 1.25rem !important;
+         }
+      }
+   }
+}

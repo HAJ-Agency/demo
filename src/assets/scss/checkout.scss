@@ -1,0 +1,31 @@
+[data-block-name="woocommerce/classic-shortcode"] {
+   margin: 0 auto;
+}
+
+form.checkout {
+   display: flex !important;
+   gap: 1rem !important;
+   #customer_details {
+      width: 50% !important;
+      .col-1,
+      .col-2 {
+         width: 100% !important;
+      }
+   }
+   #order_review_heading {
+      display: none !important;
+   }
+   #order_review {
+      width: 50% !important;
+   }
+   .woocommerce-checkout-review-order-table {
+      width: 100% !important;
+   }
+   @media (max-width: 768px) {
+      flex-direction: column !important;
+      #customer_details,
+      #order_review {
+         width: 100% !important;
+      }
+   }
+}

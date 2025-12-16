@@ -1,0 +1,47 @@
+.scrollbar-slider {
+   .swiper-scrollbar {
+      position: absolute;
+      left: var(--swiper-scrollbar-sides-offset, 1%);
+      bottom: var(--swiper-scrollbar-bottom, 4px);
+      top: var(--swiper-scrollbar-top, auto);
+      z-index: 50;
+      height: var(--swiper-scrollbar-size, 4px);
+      width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+      &::after {
+         content: '';
+         height: 100%;
+         width: 25%;
+         position: absolute;
+         background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 0.5));
+         border-radius: var(--swiper-scrollbar-border-radius, 10px);
+         left: 0;
+         top: 0;
+      }
+   }
+   @for $i from 1 through 5 {
+      &[data-posts-per-view-desktop='#{$i}'] {
+         .swiper-wrapper {
+            grid-template-columns: repeat(#{$i}, 1fr);
+         }
+      }
+   }
+   @media (max-width: 640px) {
+      @for $i from 1 through 5 {
+         &[data-posts-per-view-mobile='#{$i}'] {
+            .swiper-wrapper {
+               grid-template-columns: repeat(#{$i}, 1fr);
+            }
+         }
+      }
+   }
+   .swiper-wrapper {
+      display: grid;
+      grid-auto-rows: 0px;
+      grid-template-rows: 1fr;
+      overflow: hidden;
+      gap: 0.625rem;
+      .slide {
+         overflow: hidden;
+      }
+   }
+}

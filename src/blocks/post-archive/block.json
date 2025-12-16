@@ -1,0 +1,38 @@
+{
+   "name": "tiburon/post-archive",
+   "version": "1.0.1",
+   "textdomain": "tiburon",
+   "editorScript": ["file:./index.js", "file:./viewScript.js"],
+   "viewScript": "file:./viewScript.js",
+   "editorStyle": "file:./index.css",
+   "render": "file:./render.php",
+   "style": "file:./style-index.css",
+   "attributes": {
+      "blockId": {
+         "type": "string"
+      },
+      "mainClassName": {
+         "type": "string"
+      },
+      "postType": {
+         "type": "string",
+         "default": "post"
+      },
+      "numberOfPosts": {
+         "type": "number",
+         "default": 6
+      },
+      "postsPerViewDesktop": {
+         "type": "number",
+         "default": 4
+      },
+      "postsPerViewTablet": {
+         "type": "number",
+         "default": 3
+      },
+      "postsPerViewMobile": {
+         "type": "number",
+         "default": 1
+      }
+   }
+}

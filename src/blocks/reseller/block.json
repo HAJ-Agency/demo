@@ -1,0 +1,22 @@
+{
+   "name": "tiburon/reseller",
+   "version": "1.0.2",
+   "textdomain": "tiburon",
+   "editorScript": "file:./index.js",
+   "viewScript": "file:./viewScript.js",
+   "editorStyle": "file:./index.css",
+   "render": "file:./render.php",
+   "style": "file:./style-index.css",
+   "attributes": {
+      "blockId": {
+         "type": "string"
+      },
+      "mainClassName": {
+         "type": "string"
+      },
+      "hasSeparateSearchBar": {
+         "type": "boolean",
+         "default": false
+      }
+   }
+}

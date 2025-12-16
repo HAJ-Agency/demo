@@ -1,0 +1,128 @@
+// .wp-block-woocommerce-product-image-gallery .flex-control-nav {
+//    display: none !important;
+// }
+
+.wp-block-woocommerce-product-image-gallery {
+   // max-width: 100% !important;
+   max-width: 700px !important;
+   .flex-viewport {
+      background-color: var(--wp--preset--color--grey);
+
+      .wp-post-image, .woocommerce-product-gallery__image img {
+         object-fit: contain;
+         aspect-ratio: 1 / 1;
+      }
+   }
+}
+
+.woocommerce-product-gallery {
+   position: relative;
+}
+
+.wcg-pager {
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   top: 35%;
+   left: 5%;
+   width: 90%;
+   @media (max-width: 1210px) {
+      // top: 15rem;
+   }
+}
+.wcg-pager button {
+   background: #f5f5f5;
+   border: 0;
+   padding: 0.5rem;
+   cursor: pointer;
+   line-height: 1;
+   border-radius: 10px;
+   opacity: 0.4;
+   display: flex;
+   align-items: center;
+}
+// .wcg-pager button[disabled] {
+//    opacity: 0.4;
+//    cursor: default;
+// }
+
+.woocommerce-product-gallery__trigger {
+   display: none;
+}
+
+.flex-control-thumbs {
+   margin-top: 0.75rem !important;
+}
+
+.flex-control-nav {
+   display: flex;
+   gap: 0.75rem;
+}
+
+.zoomImg {
+   display: none !important;
+}
+
+// .woocommerce-product-gallery__image {
+//    background-color: #f5f5f5;
+//    > a > img {
+//       aspect-ratio: 1 / 1 !important;
+//       background-size: contain;
+//    }
+// }
+
+.woocommerce-product-gallery {
+   &__image {
+      background-color: #f5f5f5;
+      aspect-ratio: 1 / 1 !important;
+      position: relative;
+      overflow: hidden;
+      > a > img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         max-width: 100%;
+         max-height: 100%;
+         transform: translate(-50%, -50%);
+         width: auto;
+         height: auto;
+         object-fit: contain;
+      }
+   }
+}
+
+.flex-control-nav {
+   > li {
+      background-color: #f5f5f5;
+      aspect-ratio: 1 / 1 !important;
+      position: relative;
+      overflow: hidden;
+      > img {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         max-width: 100%;
+         max-height: 100%;
+         transform: translate(-50%, -50%);
+         object-fit: contain;
+      }
+   }
+}
+
+.flex-control-thumbs li {
+   aspect-ratio: 1 / 1;
+   background: #f5f5f5;
+   overflow: hidden;
+   display: flex !important;
+   align-items: center;
+   justify-content: center;
+   > img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain !important;
+      object-position: center !important;
+
+      max-width: none !important;
+      max-height: none !important;
+   }
+}

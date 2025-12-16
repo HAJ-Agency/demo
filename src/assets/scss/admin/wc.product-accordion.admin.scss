@@ -1,0 +1,42 @@
+.wc-accordion-repeater {
+   display: grid;
+   gap: 12px;
+}
+.woocommerce_options_panel {
+   .wc-accordion-row,
+   .wc-var-row {
+      margin: 8px 0;
+      padding: 12px;
+      border: 1px solid #dcdcde;
+      border-radius: 6px;
+      background: #fff;
+      .form-field {
+         display: flex;
+         flex-direction: column;
+         padding: 0 !important;
+         > * {
+            width: 100% !important;
+            margin: 0;
+         }
+      }
+   }
+}
+
+.wc-accordion-heading,
+.wc-variation-spec {
+   padding: 0 12px;
+}
+
+.wc-accordion-title-label,
+.wc-accordion-label {
+   display: block;
+   margin-bottom: 6px;
+   font-weight: 600;
+   font-size: 13px !important;
+}
+.wc-variation-accordion-block {
+   margin: 12px 0 24px;
+}
+.wc-variation-accordion-block > h4 {
+   margin: 6px 0 10px;
+}

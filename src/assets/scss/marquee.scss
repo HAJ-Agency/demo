@@ -1,0 +1,35 @@
+.marquee {
+   display: flex;
+   overflow: hidden;
+   white-space: nowrap;
+   width: max-content;
+
+   p {
+      display: inline-block;
+      &:last-child {
+         margin-right: var(--wp--preset--spacing--4-375);
+      }
+   }
+
+   // Själva animationen
+   &::before,
+   &::after {
+      content: "";
+      flex: 0 0 auto;
+   }
+
+   animation: marquee-scroll 30s linear infinite;
+
+   &:hover {
+      animation-play-state: paused;
+   }
+}
+
+@keyframes marquee-scroll {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-50%);
+   }
+}

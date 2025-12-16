@@ -1,0 +1,35 @@
+{
+   "name": "akka",
+   "version": "1.0.0",
+   "scripts": {
+      "start": "wp-scripts start --webpack-src-dir=src/assets --output-path=build/assets --config=tiburon-webpack.config.js",
+      "block:dev": "wp-scripts start --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php --experimental-modules",
+      "block:prod": "wp-scripts build --webpack-src-dir=src/blocks --output-path=build/blocks --webpack-copy-php --experimental-modules",
+      "theme:dev": "node watch.js",
+      "theme:prod": "wp-scripts build --webpack-src-dir=src/assets --output-path=build/assets --config=tiburon-webpack.config.js",
+      "composer:build": "composer dump-autoload -o"
+   },
+   "devDependencies": {
+      "@babel/core": "^7.26.0",
+      "@babel/preset-env": "^7.26.0",
+      "@babel/preset-react": "^7.26.3",
+      "@prettier/plugin-php": "^0.24.0",
+      "@wordpress/scripts": "^30.8.1",
+      "ajv": "^7.2.4",
+      "babel-loader": "^9.2.1",
+      "chokidar-cli": "^3.0.0",
+      "classnames": "^2.5.1",
+      "css-loader": "^7.1.2",
+      "mini-css-extract-plugin": "^2.9.2",
+      "path": "^0.12.7",
+      "prettier": "^3.6.2",
+      "sass": "^1.81.0",
+      "style-loader": "^4.0.0",
+      "tree-kill": "^1.2.2",
+      "webpack": "^5.96.1",
+      "webpack-cli": "^5.1.4",
+      "webpack-dev-server": "^5.2.0",
+      "webpack-remove-empty-scripts": "^1.0.4",
+      "webpack-watched-glob-entries-plugin": "^3.0.2"
+   }
+}

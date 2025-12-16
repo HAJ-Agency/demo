@@ -1,0 +1,13 @@
+.wp-block-image {
+   &.image-is-watermark,
+   &[data-is-watermark="true"] {
+      position: absolute;
+      left: calc(50% + var(--watermark-position-x, 0) * 0.5%);
+      top: calc(50% + var(--watermark-position-y, 0) * 0.5%);
+      transform: translate(-50%, -50%);
+      width: max-content;
+      opacity: var(--watermark-opacity, 1);
+      z-index: 1;
+      pointer-events: none;
+   }
+}

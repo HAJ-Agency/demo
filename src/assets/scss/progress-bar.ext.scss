@@ -1,0 +1,17 @@
+.progress-bar-white {
+   transform-origin: left center;
+   transform: scaleX(0);
+   height: 100%;
+   width: 100%;
+   background-color: white !important;
+   will-change: transform;
+   transition: transform 1.6s ease-out;
+}
+
+.animate-bars .progress-bar-white {
+   transform: scaleX(1);
+}
+
+.reset-bars .progress-bar-white {
+   transform: scaleX(0);
+}

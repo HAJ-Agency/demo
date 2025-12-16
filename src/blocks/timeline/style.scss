@@ -1,0 +1,24 @@
+.wp-block-timeline {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+.circle circle,
+.line line {
+   stroke: black;
+   fill: transparent;
+   transition:
+      stroke 1.2s ease,
+      fill 1.2s ease;
+   // Default delay, will be overridden by CSS custom property
+   transition-delay: calc(var(--block-index, 0) * 0.4s);
+}
+
+.circle circle.in-view,
+.line line.in-view {
+   stroke: #00b21e;
+   fill: #00b21e;
+}

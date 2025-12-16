@@ -1,0 +1,213 @@
+.frm_forms {
+   form {
+      .frm_form_fields {
+         fieldset {
+            padding: 0;
+         }
+         input[type="text"],
+         input[type="email"],
+         input[type="url"],
+         input[type="tel"],
+         input[type="number"],
+         input[type="password"],
+         textarea {
+            background-color: transparent;
+         }
+         input[type="checkbox"] {
+            position: relative;
+            &:after {
+               content: "";
+               position: absolute;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               background-color: var(--wp--preset--color--white) !important;
+               display: inline-block;
+            }
+            &:checked {
+               &:after {
+                  display: none;
+               }
+            }
+         }
+         .frm_checkbox {
+            display: flex !important;
+            gap: 0.5rem !important;
+         }
+         .frm_submit {
+            button {
+               &.frm_button_submit {
+                  box-shadow: none;
+                  text-transform: none;
+                  font-family: var(--wp--preset--font-family--body);
+                  font-size: var(--wp--preset--font-size--1-125);
+                  font-weight: 400;
+                  padding: 0.875rem 2rem;
+                  margin: 0;
+               }
+            }
+         }
+      }
+   }
+   &.frm_style_mailchimp-style {
+      form {
+         .frm_form_fields {
+            fieldset {
+               .frm_fields_container {
+                  .frm_form_field {
+                     &:has(input[type="email"]) {
+                        position: relative;
+                        &::before {
+                           content: "";
+                           background: no-repeat center
+                              url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19" fill="none"><path d="M1 4.22461L9.16492 9.94005C9.82609 10.4029 10.1567 10.6343 10.5163 10.7239C10.8339 10.8031 11.1661 10.8031 11.4837 10.7239C11.8433 10.6343 12.1739 10.4029 12.8351 9.94005L21 4.22461M5.8 17.2246H16.2C17.8802 17.2246 18.7202 17.2246 19.362 16.8976C19.9265 16.61 20.3854 16.1511 20.673 15.5866C21 14.9448 21 14.1048 21 12.4246V6.02461C21 4.34445 21 3.50437 20.673 2.86264C20.3854 2.29815 19.9265 1.83921 19.362 1.55159C18.7202 1.22461 17.8802 1.22461 16.2 1.22461H5.8C4.11984 1.22461 3.27976 1.22461 2.63803 1.55159C2.07354 1.83921 1.6146 2.29815 1.32698 2.86264C1 3.50437 1 4.34445 1 6.02461V12.4246C1 14.1048 1 14.9448 1.32698 15.5866C1.6146 16.1511 2.07354 16.61 2.63803 16.8976C3.27976 17.2246 4.11984 17.2246 5.8 17.2246Z" stroke="%23000" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                           background-size: contain;
+                           position: absolute;
+                           left: 12px;
+                           top: 50%;
+                           width: 20px;
+                           height: 16px;
+                           transform: translateY(-50%);
+                           pointer-events: none;
+                        }
+                        input[type="email"] {
+                           padding-left: 44px;
+                        }
+                     }
+                     input {
+                        &::placeholder {
+                           color: rgba(0, 0, 0, 0.7);
+                           font-family: var(--wp--preset--font-family--body);
+                           font-size: var(--wp--preset--font-size--1-125);
+                           font-weight: 400;
+                           line-height: 1;
+                        }
+                     }
+                     @media screen and (max-width: 1200px) {
+                        &.frm_two_thirds,
+                        &.frm_third {
+                           grid-column: span 12 / span 12 !important;
+                           .frm_submit {
+                              button {
+                                 width: 100%;
+                                 margin-top: 10px;
+                              }
+                           }
+                        }
+                     }
+                     @media screen and (min-width: 1201px) and (max-width: 1400px) {
+                        .frm_submit {
+                           button {
+                              padding: 14px 25px;
+                           }
+                        }
+                     }
+                  }
+               }
+               // #frm_field_8_container,
+               // #frm_field_3_container {
+               //    position: relative;
+               // }
+               // #frm_field_8_container::before,
+               // #frm_field_3_container::before {
+               //    content: "";
+               //    background: no-repeat center
+               //       url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="19" viewBox="0 0 22 19" fill="none"><path d="M1 4.22461L9.16492 9.94005C9.82609 10.4029 10.1567 10.6343 10.5163 10.7239C10.8339 10.8031 11.1661 10.8031 11.4837 10.7239C11.8433 10.6343 12.1739 10.4029 12.8351 9.94005L21 4.22461M5.8 17.2246H16.2C17.8802 17.2246 18.7202 17.2246 19.362 16.8976C19.9265 16.61 20.3854 16.1511 20.673 15.5866C21 14.9448 21 14.1048 21 12.4246V6.02461C21 4.34445 21 3.50437 20.673 2.86264C20.3854 2.29815 19.9265 1.83921 19.362 1.55159C18.7202 1.22461 17.8802 1.22461 16.2 1.22461H5.8C4.11984 1.22461 3.27976 1.22461 2.63803 1.55159C2.07354 1.83921 1.6146 2.29815 1.32698 2.86264C1 3.50437 1 4.34445 1 6.02461V12.4246C1 14.1048 1 14.9448 1.32698 15.5866C1.6146 16.1511 2.07354 16.61 2.63803 16.8976C3.27976 17.2246 4.11984 17.2246 5.8 17.2246Z" stroke="%23000" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+               //    background-size: contain;
+               //    position: absolute;
+               //    left: 12px;
+               //    top: 50%;
+               //    width: 20px;
+               //    height: 16px;
+               //    transform: translateY(-50%);
+               //    pointer-events: none;
+               // }
+               // #frm_field_8_container input[type="email"],
+               // #frm_field_3_container input[type="email"] {
+               //    padding-left: 44px;
+               // }
+            }
+         }
+         .frm_error_style {
+            font-size: var(--wp--preset--font-size--0-875);
+            margin-bottom: 10px;
+            text-align: left;
+         }
+      }
+   }
+   .frm_message {
+      text-align: center;
+      background-color: var(--wp--preset--color--white) !important;
+      color: var(--wp--preset--color--black) !important;
+      font-family: var(--wp--preset--font-family--body) !important;
+      border: 1px solid var(--wp--preset--color--black) !important;
+      * {
+         color: var(--wp--preset--color--black) !important;
+         margin: 0 !important;
+      }
+   }
+}
+
+.submit-frm-btn {
+   width: 267px;
+   @media (max-width: 559px) {
+      width: 100%;
+   }
+   .frm_button_submit {
+      transition: all 0.2s ease;
+   }
+   .frm_button_submit {
+      &:hover {
+         background-color: #00b21e !important;
+         border: 1px solid #00b21e !important;
+      }
+   }
+}
+
+#field_qh4icy,
+#field_29yf4d3,
+#field_e6lis6,
+#field_9jv0r1 {
+   &:focus {
+      outline: none !important;
+      border: 2px solid #00b21e !important;
+      // box-shadow: 0 0 4px #00b21e;
+      box-shadow: none !important;
+   }
+}
+
+.frm_opt_container {
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   .frm_checkbox {
+      display: flex;
+      input[type="checkbox"] {
+         flex-shrink: 0;
+      }
+      label {
+         white-space: normal;
+      }
+   }
+}
+
+@media (max-width: 1080px) {
+   .wp-block-columns.contact-columns-wrapper {
+      flex-wrap: wrap !important;
+      .wp-block-column {
+         flex: 46% !important;
+         max-width: 46% !important;
+      }
+      > .wp-block-column:first-child {
+         flex-basis: 100% !important;
+         max-width: 100% !important;
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .wp-block-columns.contact-columns-wrapper > .wp-block-column {
+      flex: 100% !important;
+      max-width: 100% !important;
+   }
+}

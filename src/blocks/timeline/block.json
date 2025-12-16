@@ -1,0 +1,16 @@
+{
+   "$schema": "https://schemas.wp.org/trunk/block.json",
+   "apiVersion": 3,
+   "name": "tiburon/timeline",
+   "title": "Timeline",
+   "version": "1.0.0",
+   "supports": {
+      "html": false
+   },
+   "textdomain": "akka",
+   "editorScript": "file:./index.js",
+   "editorStyle": "file:./index.css",
+   "render": "file:./render.php",
+   "viewScript": "file:./render.js",
+   "style": "file:./style-index.css"
+}
