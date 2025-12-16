@@ -104,7 +104,7 @@
       });
    });
 
-   //AKKA
+   //DEMO
    document.addEventListener("click", function (e) {
       const card = e.target.closest(".post-card");
       if (card) {

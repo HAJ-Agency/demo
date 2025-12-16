@@ -1,10 +1,10 @@
 <?php
 
-namespace Akka\Includes\Api;
+namespace Demo\Includes\Api;
 
-use function Akka\Includes\Functions\get_post_type_content;
-use function Akka\Includes\Functions\get_post_type_items;
-use function Akka\Includes\Functions\get_product_data;
+use function Demo\Includes\Functions\get_post_type_content;
+use function Demo\Includes\Functions\get_post_type_items;
+use function Demo\Includes\Functions\get_product_data;
 
 add_action('rest_api_init',  __NAMESPACE__ . '\hapi_search_page_endpoint');
 function hapi_search_page_endpoint() {
@@ -209,7 +209,7 @@ function hapi_get_resellers($request) {
                }
             }
 
-            $city_name = $store['city_name'] ?? __('Okänd stad', 'akka');
+            $city_name = $store['city_name'] ?? __('Okänd stad', 'demo');
 
             $results[$city_name][] = [
                'store_name' => $store['store_name'] ?? '',

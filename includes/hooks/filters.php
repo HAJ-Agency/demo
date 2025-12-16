@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\Hooks;
+namespace Demo\Includes\Hooks;
 
 /* Remove "Protected: " before title on password protected posts */
 

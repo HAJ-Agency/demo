@@ -9,9 +9,9 @@
             <span class="product-card__price"></span>
          </div>
          <button class="product-card__add-to-cart wp-block-button__link wp-element-button" aria-label="Add to cart" rel="nofollow">
-            <?= __("Add to cart", "akka"); ?>
+            <?= __("Add to cart", "demo"); ?>
             <div class="product-card__add-to-cart-notice">
-               <?= __("Added to cart", "akka"); ?>
+               <?= __("Added to cart", "demo"); ?>
             </div>
          </button>
       </div>

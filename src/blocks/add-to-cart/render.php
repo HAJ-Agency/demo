@@ -132,14 +132,14 @@ if ($is_variable) {
    data-variation-descriptions="<?php echo esc_attr(wp_json_encode($variation_descs_map, JSON_UNESCAPED_UNICODE)); ?>"
    <?php endif; ?>
    data-i18n="<?php echo esc_attr(wp_json_encode([
-                  'add'        => __('Lägg i varukorg', 'akka'),
-                  'added'      => __('Tillagd i varukorg', 'akka'),
-                  'selectAll'  => __('Välj alternativ', 'akka'),
-                  'outOfStock' => __('Slut i lager', 'akka'),
-                  'unavailable' => __('Ej tillgänglig kombination', 'akka'),
-                  'qty'        => __('Antal', 'akka'),
-                  'readMore'   => __('Läs mer', 'akka'),
-                  'readLess'   => __('Visa mindre', 'akka'),
+                  'add'        => __('Lägg i varukorg', 'demo'),
+                  'added'      => __('Tillagd i varukorg', 'demo'),
+                  'selectAll'  => __('Välj alternativ', 'demo'),
+                  'outOfStock' => __('Slut i lager', 'demo'),
+                  'unavailable' => __('Ej tillgänglig kombination', 'demo'),
+                  'qty'        => __('Antal', 'demo'),
+                  'readMore'   => __('Läs mer', 'demo'),
+                  'readLess'   => __('Visa mindre', 'demo'),
                ], JSON_UNESCAPED_UNICODE)); ?>"
    data-currency="<?php echo esc_attr($currency); ?>"
    data-parent-price="<?php echo esc_attr(wc_format_decimal($parent_price_num)); ?>"
@@ -156,10 +156,10 @@ if ($is_variable) {
 
    <div class="hapi-qty-and-btn__wrapper">
       <?php if ($in_stock) : ?>
-         <div class="hapi-qty" aria-label="<?php echo esc_attr__('Antal', 'akka'); ?>">
-            <button type="button" class="hapi-qty__btn hapi-qty__btn--minus" aria-label="<?php echo esc_attr__('Minska antal', 'akka'); ?>">−</button>
-            <input class="hapi-qty__input" type="number" inputmode="numeric" min="1" step="1" value="1" aria-label="<?php echo esc_attr__('Antal', 'akka'); ?>" />
-            <button type="button" class="hapi-qty__btn hapi-qty__btn--plus" aria-label="<?php echo esc_attr__('Öka antal', 'akka'); ?>">+</button>
+         <div class="hapi-qty" aria-label="<?php echo esc_attr__('Antal', 'demo'); ?>">
+            <button type="button" class="hapi-qty__btn hapi-qty__btn--minus" aria-label="<?php echo esc_attr__('Minska antal', 'demo'); ?>">−</button>
+            <input class="hapi-qty__input" type="number" inputmode="numeric" min="1" step="1" value="1" aria-label="<?php echo esc_attr__('Antal', 'demo'); ?>" />
+            <button type="button" class="hapi-qty__btn hapi-qty__btn--plus" aria-label="<?php echo esc_attr__('Öka antal', 'demo'); ?>">+</button>
          </div>
       <?php endif; ?>
       <div class="hapi-atc-wrap">
@@ -167,9 +167,9 @@ if ($is_variable) {
             <button
                type="button"
                class="hapi-atc-button"
-               aria-label="<?php echo esc_attr__('Add to cart', 'akka'); ?>"
+               aria-label="<?php echo esc_attr__('Add to cart', 'demo'); ?>"
                data-disabled="false">
-               <?php echo esc_html__('Add to cart', 'akka'); ?>
+               <?php echo esc_html__('Add to cart', 'demo'); ?>
                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.881 122.88" width="16" height="16">
                   <path d="M56.573,4.868c0-0.655,0.132-1.283,0.37-1.859c0.249-0.6,0.61-1.137,1.056-1.583C58.879,0.545,60.097,0,61.44,0 c0.658,0,1.287,0.132,1.863,0.371c0.012,0.005,0.023,0.011,0.037,0.017c0.584,0.248,1.107,0.603,1.543,1.039 c0.881,0.88,1.426,2.098,1.426,3.442c0,0.03-0.002,0.06-0.006,0.089v51.62l51.619,0c0.029-0.003,0.061-0.006,0.09-0.006 c0.656,0,1.285,0.132,1.861,0.371c0.014,0.005,0.025,0.011,0.037,0.017c0.584,0.248,1.107,0.603,1.543,1.039 c0.881,0.88,1.428,2.098,1.428,3.441c0,0.654-0.133,1.283-0.371,1.859c-0.248,0.6-0.609,1.137-1.057,1.583 c-0.445,0.445-0.98,0.806-1.58,1.055v0.001c-0.576,0.238-1.205,0.37-1.861,0.37c-0.029,0-0.061-0.002-0.09-0.006l-51.619,0.001 v51.619c0.004,0.029,0.006,0.06,0.006,0.09c0,0.656-0.133,1.286-0.371,1.861c-0.006,0.014-0.012,0.025-0.018,0.037 c-0.248,0.584-0.602,1.107-1.037,1.543c-0.883,0.882-2.1,1.427-3.443,1.427c-0.654,0-1.283-0.132-1.859-0.371 c-0.6-0.248-1.137-0.609-1.583-1.056c-0.445-0.444-0.806-0.98-1.055-1.58h-0.001c-0.239-0.575-0.371-1.205-0.371-1.861 c0-0.03,0.002-0.061,0.006-0.09V66.303H4.958c-0.029,0.004-0.059,0.006-0.09,0.006c-0.654,0-1.283-0.132-1.859-0.371 c-0.6-0.248-1.137-0.609-1.583-1.056c-0.445-0.445-0.806-0.98-1.055-1.58H0.371C0.132,62.726,0,62.097,0,61.44 c0-0.655,0.132-1.283,0.371-1.859c0.249-0.6,0.61-1.137,1.056-1.583c0.881-0.881,2.098-1.426,3.442-1.426 c0.031,0,0.061,0.002,0.09,0.006l51.62,0l0-51.62C56.575,4.928,56.573,4.898,56.573,4.868L56.573,4.868z" />
                </svg>
@@ -180,8 +180,8 @@ if ($is_variable) {
                type="button"
                class="hapi-atc-button is-disabled hapi-atc-button--out-of-stock"
                disabled
-               aria-label="<?php echo esc_attr__('Out of stock', 'akka'); ?>">
-               <?php echo esc_html__('Out of stock', 'akka'); ?>
+               aria-label="<?php echo esc_attr__('Out of stock', 'demo'); ?>">
+               <?php echo esc_html__('Out of stock', 'demo'); ?>
             </button>
          <?php endif; ?>
          <div class="hapi-status" aria-live="polite" aria-atomic="true"></div>
@@ -193,7 +193,7 @@ if ($is_variable) {
    <div class="hapi-desc">
       <div class="hapi-desc__content"><!-- filled by JS --></div>
       <!-- <button type="button" class="hapi-desc__toggle" aria-expanded="false" hidden>
-         <?php echo esc_html__('Läs mer', 'akka'); ?>
+         <?php echo esc_html__('Läs mer', 'demo'); ?>
       </button> -->
    </div>
    <?php
@@ -207,7 +207,7 @@ if ($is_variable) {
    ?>
 
    <?php if ($is_variable && ! empty($variation_attributes)): ?>
-      <div class="hapi-attrs" role="group" aria-label="<?php echo esc_attr__('Produktattribut', 'akka'); ?>">
+      <div class="hapi-attrs" role="group" aria-label="<?php echo esc_attr__('Produktattribut', 'demo'); ?>">
          <?php foreach ($variation_attributes as $attr_name => $options) :
             $label = hapi_attr_label($attr_name); ?>
             <div class="hapi-attr" data-attribute-name="<?php echo esc_attr($attr_name); ?>">

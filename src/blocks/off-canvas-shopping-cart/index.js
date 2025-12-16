@@ -13,9 +13,9 @@ import metadata from './block.json'
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-    title: __('Off-Canvas Varukorg', 'akka'),
+    title: __('Off-Canvas Varukorg', 'demo'),
     // ToDo: Change the description
-    description: __('Visar en off-canvas varukorg för WooCommerce', 'akka'),
+    description: __('Visar en off-canvas varukorg för WooCommerce', 'demo'),
     category: 'tiburon',
     icon: {
         src: (

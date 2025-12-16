@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\Curl;
+namespace Demo\Includes\Curl;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Message;

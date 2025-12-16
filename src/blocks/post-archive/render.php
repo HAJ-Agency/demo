@@ -1,6 +1,6 @@
 <?php
 
-use Akka\Includes\Api;
+use demo\Includes\Api;
 
 $post_type = $attributes['postType'] ?? 'post';
 $total_posts = $attributes['numberOfPosts'] ?? 6;
@@ -24,14 +24,14 @@ $categories = get_categories([
       <div class="post-card__content">
          <h3 class="post-card__title"></h3>
          <p class="post-card__excerpt"></p>
-         <a class="post-card__read-more" href=""><?= __('Läs mer', 'akka') ?></a>
+         <a class="post-card__read-more" href=""><?= __('Läs mer', 'demo') ?></a>
       </div>
    </div>
    <div class="post-archive-header">
-      <h3 class="post-archive-title"><?= __('Filtrera', 'akka') ?></h3>
+      <h3 class="post-archive-title"><?= __('Filtrera', 'demo') ?></h3>
       <div class="post-categories">
          <button class="wp-block-button__link wp-element-button active" data-category-slug="">
-            <?= __('Visa allt', 'akka') ?>
+            <?= __('Visa allt', 'demo') ?>
          </button>
          <?php foreach ($categories as $category) { ?>
             <button class="wp-block-button__link wp-element-button" data-category-slug="<?= esc_attr($category->slug); ?>">
@@ -49,7 +49,7 @@ $categories = get_categories([
             <div class="post-card__content">
                <h3 class="post-card__title"><?= $post['title']; ?></h3>
                <p class="post-card__excerpt"><?= $post['excerpt']; ?></p>
-               <a class="post-card__read-more" href="<?= $post['link'] ?>"><?= __('Läs mer', 'akka') ?></a>
+               <a class="post-card__read-more" href="<?= $post['link'] ?>"><?= __('Läs mer', 'demo') ?></a>
             </div>
          </div>
       <?php } ?>
@@ -57,7 +57,7 @@ $categories = get_categories([
    <div class="posts-load-more">
       <button class="wp-block-button__link wp-element-button">
          <span class="posts-load-more-text">
-            <?= esc_html__('Visa fler', 'akka'); ?>
+            <?= esc_html__('Visa fler', 'demo'); ?>
          </span>
          <span class="posts-load-more-loader">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">

@@ -13,9 +13,9 @@ import metadata from "./block.json";
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-    title: __("Lägg i varukorgen", "akka"),
+    title: __("Lägg i varukorgen", "demo"),
     // ToDo: Change the description
-    description: __("Sektion för lägg i varukorgen på produktsidan", "akka"),
+    description: __("Sektion för lägg i varukorgen på produktsidan", "demo"),
     category: "tiburon",
     icon: {
         src: (

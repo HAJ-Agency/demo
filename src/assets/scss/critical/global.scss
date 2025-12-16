@@ -94,7 +94,7 @@
    }
 }
 
-// Akka logo on green hills image (frontpage)
+// Demo logo on green hills image (frontpage)
 .logo-absolute {
    width: 100px;
    position: absolute;
@@ -107,7 +107,7 @@
    }
 }
 
-// Paragraphs with inline image (white Akka logo)
+// Paragraphs with inline image (white Demo logo)
 p {
    &:has(img[class*="wp-image-"]) {
       display: flex;

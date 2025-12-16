@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\Functions;
+namespace Demo\Includes\Functions;
 
 // Register Custom Post Type
 add_action('init', __NAMESPACE__ . '\register_ingredient_post_type');

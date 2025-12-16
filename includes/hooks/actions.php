@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\Hooks;
+namespace Demo\Includes\Hooks;
 
 /**
  * Enqueue styles and scripts.
@@ -8,9 +8,9 @@ namespace Akka\Includes\Hooks;
  * @see https://developers.google.com/speed/libraries#jquery
  * @since 1.0.0
  */
-add_action('wp_enqueue_scripts', __NAMESPACE__ . '\akka_enqueue_assets', 1);
+add_action('wp_enqueue_scripts', __NAMESPACE__ . '\demo_enqueue_assets', 1);
 
-function akka_enqueue_assets() {
+function demo_enqueue_assets() {
 
    wp_enqueue_style(
       'global',
@@ -167,11 +167,11 @@ function akka_enqueue_assets() {
  *
  * @since 1.0.0
  */
-add_action('admin_enqueue_scripts', __NAMESPACE__ . '\akka_enqueue_admin_assets', 10);
+add_action('admin_enqueue_scripts', __NAMESPACE__ . '\demo_enqueue_admin_assets', 10);
 
-function akka_enqueue_admin_assets() {
+function demo_enqueue_admin_assets() {
    wp_enqueue_script(
-      'akka-remove-default-btn',
+      'demo-remove-default-btn',
       get_stylesheet_directory_uri() . '/build/assets/js/remove-default-btn.js',
       ['wp-blocks'],
       filemtime(get_stylesheet_directory() . '/build/assets/js/remove-default-btn.js'),
@@ -223,7 +223,7 @@ function extend_block_assets() {
          filemtime(get_stylesheet_directory() . '/build/assets/js/image-block.ext.js')
       );
       wp_enqueue_script(
-         'akka-remove-default-btn',
+         'demo-remove-default-btn',
          get_stylesheet_directory_uri() . '/build/assets/js/remove-default-btn.js',
          ['wp-blocks'],
          filemtime(get_stylesheet_directory() . '/build/assets/js/remove-default-btn.js'),
@@ -368,8 +368,8 @@ add_action('enqueue_block_assets', function () {
 /**
  * Wordpress Init action
  */
-add_action('init', __NAMESPACE__ . '\akka_theme_init');
-function akka_theme_init() {
+add_action('init', __NAMESPACE__ . '\demo_theme_init');
+function demo_theme_init() {
    // Register custom blocks (A - Z)
    register_block_type(get_stylesheet_directory() . '/build/blocks/accordion');
    register_block_type(get_stylesheet_directory() . '/build/blocks/add-to-cart');

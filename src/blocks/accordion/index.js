@@ -95,8 +95,8 @@ const blockAttributes = {
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-   title: __("Accordion", "akka"),
-   description: __("Ett block som visar en lista med poster i en accordion.", "akka"),
+   title: __("Accordion", "demo"),
+   description: __("Ett block som visar en lista med poster i en accordion.", "demo"),
    category: "design",
    icon: {
       src: (
@@ -265,12 +265,12 @@ registerBlockType(metadata.name, {
       return (
          <Fragment>
             <InspectorControls>
-               <PanelBody title={__("Source", "akka")}>
+               <PanelBody title={__("Source", "demo")}>
                   <PanelRow className={classNames(["block-settings"])}>
                      <div className={classNames([""])}>
                         <SelectControl
                            __nextHasNoMarginBottom
-                           label={__("Post Type", "akka")}
+                           label={__("Post Type", "demo")}
                            value={postType}
                            options={availablePostTypes}
                            onChange={(value) => {
@@ -282,7 +282,7 @@ registerBlockType(metadata.name, {
                   </PanelRow>
                   {postTypeTaxonomies && (
                      <>
-                        <label className={classNames(["custom-label"])}>{__("Exclude or include from category", "akka")}</label>
+                        <label className={classNames(["custom-label"])}>{__("Exclude or include from category", "demo")}</label>
                         <PanelRow>
                            <RadioControl
                               selected={taxonomyFilterMethod}
@@ -297,7 +297,7 @@ registerBlockType(metadata.name, {
                            <>
                               <PanelRow>
                                  <SelectControl
-                                    label={__("Taxonomy", "akka")}
+                                    label={__("Taxonomy", "demo")}
                                     value={selectedTaxonomy}
                                     options={Object.entries(postTypeTaxonomies).map(([taxonomy]) => {
                                        return {
@@ -335,9 +335,9 @@ registerBlockType(metadata.name, {
                      </>
                   )}
                </PanelBody>
-               {/* <PanelBody title={__("Filter", "akka")}>
+               {/* <PanelBody title={__("Filter", "demo")}>
                   <ToggleControl
-                     label={__("Use Filtering", "akka")}
+                     label={__("Use Filtering", "demo")}
                      checked={isFilter}
                      onChange={() => {
                         setAttributes({ isFilter: !isFilter });
@@ -345,7 +345,7 @@ registerBlockType(metadata.name, {
                   />
                   {isFilter && (
                      <PanelRow className={classNames(["block-settings flex-settings flex-wrap-full"])}>
-                        <label className={classNames(["custom-label"])}>{__("Select Category", "akka")}</label>
+                        <label className={classNames(["custom-label"])}>{__("Select Category", "demo")}</label>
                         {postTypeTaxonomies &&
                            Object.entries(postTypeTaxonomies).map(([taxonomy, taxonomyData], index) => {
                               return (
@@ -373,10 +373,10 @@ registerBlockType(metadata.name, {
                      </PanelRow>
                   )}
                </PanelBody> */}
-               {/* <PanelBody title={__('Appearance', 'akka')}>
+               {/* <PanelBody title={__('Appearance', 'demo')}>
                   <PanelRow>
                      <ToggleControl
-                        label={__('2 columns', 'akka')}
+                        label={__('2 columns', 'demo')}
                         checked={isTwoColumns}
                         onChange={() => {
                            setAttributes({ isTwoColumns: !isTwoColumns });

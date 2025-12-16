@@ -1,10 +1,10 @@
 {
-   "type": "akka",
+   "type": "demo",
    "autoload": {
       "psr-4": {
-         "Akka\\Includes\\Curl\\": "includes/curl/",
-         "Akka\\Includes\\WPCLI\\": "includes/wp-cli/",
-         "Akka\\Includes\\WooCommerce\\": "includes/woocommerce/"
+         "Demo\\Includes\\Curl\\": "includes/curl/",
+         "Demo\\Includes\\WPCLI\\": "includes/wp-cli/",
+         "Demo\\Includes\\WooCommerce\\": "includes/woocommerce/"
       },
       "files": [
          "includes/hooks/actions.php",

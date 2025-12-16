@@ -1,6 +1,6 @@
 <?php
 
-use Akka\Includes\WooCommerce\CartRenderer;
+use Demo\Includes\WooCommerce\CartRenderer;
 
 if (!defined('ABSPATH')) exit;
 

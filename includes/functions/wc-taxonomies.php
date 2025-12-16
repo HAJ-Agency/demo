@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\Functions;
+namespace Demo\Includes\Functions;
 
 add_action('init', __NAMESPACE__ . '\register_custom_product_taxonomies');
 function register_custom_product_taxonomies() {

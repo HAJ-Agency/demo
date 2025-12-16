@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\Functions;
+namespace Demo\Includes\Functions;
 
 use WP_Query;
 

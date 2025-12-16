@@ -1,5 +1,5 @@
 {
-   "name": "akka",
+   "name": "demo",
    "version": "1.0.0",
    "scripts": {
       "start": "wp-scripts start --webpack-src-dir=src/assets --output-path=build/assets --config=tiburon-webpack.config.js",

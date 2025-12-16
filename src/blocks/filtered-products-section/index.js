@@ -13,9 +13,9 @@ import metadata from "./block.json";
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-    title: __("Produktfiltersektion", "akka"),
+    title: __("Produktfiltersektion", "demo"),
     // ToDo: Change the description
-    description: __("En sektion som visar produkter baserat på ett filter", "akka"),
+    description: __("En sektion som visar produkter baserat på ett filter", "demo"),
     category: "tiburon",
     icon: {
         src: (

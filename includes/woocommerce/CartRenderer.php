@@ -4,7 +4,7 @@
  * File: includes/Cart/CartRenderer.php
  */
 
-namespace Akka\Includes\WooCommerce;
+namespace Demo\Includes\WooCommerce;
 
 if (!defined('ABSPATH')) exit;
 
@@ -338,7 +338,7 @@ class CartRenderer {
          </div>
          <div class="cart-drawer__info">
             <h4 class="cart-drawer__info-title"><?= __("Behöver du hjälp", "tiburon"); ?></h4>
-            <p class="cart-drawer__info-text"><?= __("Kontakta oss på", "tiburon"); ?> <a class="cart-drawer__link" href="mailto:info@akka.health">info@akka.health</a></p>
+            <p class="cart-drawer__info-text"><?= __("Kontakta oss på", "tiburon"); ?> <a class="cart-drawer__link" href="mailto:info@hajagency.com">info@hajagency.com</a></p>
          </div>
       <?php endif;
 
@@ -595,7 +595,7 @@ class CartRenderer {
       $pl  = strtoupper((string) get_user_meta($uid, 'fortnox_price_list', true));
       if ($pl === '') return 0.0;
 
-      $opts = get_option(\Akka\Includes\Fortnox\AdminPage::OPTION_KEY, []);
+      $opts = get_option(\Demo\Includes\Fortnox\AdminPage::OPTION_KEY, []);
       $pct  = isset($opts['pricelists'][$pl]['discount_pct']) ? (float) $opts['pricelists'][$pl]['discount_pct'] : 0.0;
       if ($pct < 0)   $pct = 0.0;
       if ($pct > 100) $pct = 100.0;

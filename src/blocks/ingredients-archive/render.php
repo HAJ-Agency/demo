@@ -4,7 +4,7 @@
 $post_type = 'ingredient';
 $total_posts = '-1';
 
-$data = Akka\Includes\Functions\get_post_type_content([
+$data = demo\Includes\Functions\get_post_type_content([
    'post_type' => $post_type,
    'posts_per_page' => $total_posts,
    'offset' => 0,
@@ -23,7 +23,7 @@ $categories = get_categories([
          <div class="ingredient-card__front">
 
             <div class="ingredient-card__overlay">
-               <p class="ingredient-card__text"><?= __('Click to read more', 'akka') ?></p>
+               <p class="ingredient-card__text"><?= __('Click to read more', 'demo') ?></p>
             </div>
          </div>
          <div class="ingredient-card__back">
@@ -35,7 +35,7 @@ $categories = get_categories([
 
    <div class="post-categories">
       <button class="wp-block-button__link wp-element-button active" data-category-slug="">
-         <?= __('Show all', 'akka') ?>
+         <?= __('Show all', 'demo') ?>
       </button>
       <?php foreach ($categories as $category) { ?>
          <button class="wp-block-button__link wp-element-button" data-category-slug="<?= esc_attr($category->slug); ?>">
@@ -55,7 +55,7 @@ $categories = get_categories([
             <div class="ingredient-card__front">
                <?= $post['image']; ?>
                <div class="ingredient-card__overlay">
-                  <p class="ingredient-card__text"><?= __('Click to read more', 'akka') ?></p>
+                  <p class="ingredient-card__text"><?= __('Click to read more', 'demo') ?></p>
                </div>
             </div>
 

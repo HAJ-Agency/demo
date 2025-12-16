@@ -2,17 +2,17 @@
 
 /**
  * Detta block kräver DATATABLES externa bibliotek
- * 
+ *
  * Nedan script måste köras, t ex i denna fil
- * \wp_enqueue_style('datatables-style', '//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css', [], HAJ_VERSION, 'all');   
+ * \wp_enqueue_style('datatables-style', '//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css', [], HAJ_VERSION, 'all');
  * \wp_enqueue_script('datatables-script', '//cdn.datatables.net/2.0.3/js/dataTables.min.js', ['jquery'], HAJ_VERSION);
- * 
+ *
  * Available data in this file:
  * $attributes - array of attributes for the block
  * $content - content of the block
  */
 
-use function Akka\Includes\Functions\get_post_type_items;
+use function Demo\Includes\Functions\get_post_type_items;
 
 
 // Enqueue DataTables scripts and styles directly when block is rendered

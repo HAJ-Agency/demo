@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\WooCommerce;
+namespace Demo\Includes\WooCommerce;
 
 if (!defined('ABSPATH')) {
    exit;

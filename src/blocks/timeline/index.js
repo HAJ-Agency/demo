@@ -39,8 +39,8 @@ const blockAttributes = {
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-   title: __("Timeline", "akka"),
-   description: __("Ikon för timeline", "akka"),
+   title: __("Timeline", "demo"),
+   description: __("Ikon för timeline", "demo"),
    category: "design",
    icon: {
       src: (
@@ -87,8 +87,8 @@ registerBlockType(metadata.name, {
       return (
          <Fragment>
             <InspectorControls>
-               <PanelBody title={__("Block Settings", "akka")} initialOpen={true}>
-                  <PanelRow>{__("No settings available", "akka")}</PanelRow>
+               <PanelBody title={__("Block Settings", "demo")} initialOpen={true}>
+                  <PanelRow>{__("No settings available", "demo")}</PanelRow>
                </PanelBody>
             </InspectorControls>
             <div {...blockProps} dataBlockId={blockId} className={classNames([mainClassName])}>

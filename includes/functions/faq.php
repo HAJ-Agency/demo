@@ -1,6 +1,6 @@
 <?php
 
-namespace Akka\Includes\Functions;
+namespace Demo\Includes\Functions;
 
 // Register Custom Post Type
 add_action('init', __NAMESPACE__ . '\register_question_post_type');
@@ -15,7 +15,7 @@ function register_question_post_type() {
         'public' => true,
         'has_archive' => false,
         'publicly_queryable' => false,
-        'show_in_rest' => true, 
+        'show_in_rest' => true,
         'supports' => ['title', 'editor'],
         'rewrite' => false,
         'menu_icon' => 'dashicons-format-chat',

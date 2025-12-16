@@ -7,7 +7,7 @@
    "supports": {
       "html": false
    },
-   "textdomain": "akka",
+   "textdomain": "demo",
    "editorScript": "file:./index.js",
    "editorStyle": "file:./index.css",
    "render": "file:./render.php",

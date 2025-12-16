@@ -1,8 +1,8 @@
 <?php
 
-namespace Akka\Includes\WPCLI;
+namespace Demo\Includes\WPCLI;
 
-use Akka\Includes\WPCLI\TiburonCLIFunctions;
+use Demo\Includes\WPCLI\TiburonCLIFunctions;
 
 class TiburonCLI {
    public function __construct() {

@@ -13,11 +13,11 @@ import metadata from './block.json';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-   title: __('Post arkiv', 'akka'),
+   title: __('Post arkiv', 'demo'),
    // ToDo: Change the description
    description: __(
       'Ett block som visar inlägg från en post typ med filtrering',
-      'akka',
+      'demo',
    ),
    category: 'tiburon',
    icon: {

@@ -1,6 +1,6 @@
 <?php
 
-use function Akka\Includes\Functions\get_product_data;
+use function demo\Includes\Functions\get_product_data;
 
 $is_grid = !empty($attributes['isGrid']);
 
@@ -157,10 +157,10 @@ if (!function_exists('render_product_cards')) {
                            <button
                               type="button"
                               class="product-card__add-to-cart"
-                              aria-label="<?php echo esc_attr__('Add to cart', 'akka'); ?>"
+                              aria-label="<?php echo esc_attr__('Add to cart', 'demo'); ?>"
                               data-product-id="<?= esc_attr($product_id); ?>"
                               data-disabled="false">
-                              <?php echo esc_html__('Add to cart', 'akka'); ?>
+                              <?php echo esc_html__('Add to cart', 'demo'); ?>
                               <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.881 122.88" width="16" height="16">
                                  <path d="M56.573,4.868c0-0.655,0.132-1.283,0.37-1.859c0.249-0.6,0.61-1.137,1.056-1.583C58.879,0.545,60.097,0,61.44,0 c0.658,0,1.287,0.132,1.863,0.371c0.012,0.005,0.023,0.011,0.037,0.017c0.584,0.248,1.107,0.603,1.543,1.039 c0.881,0.88,1.426,2.098,1.426,3.442c0,0.03-0.002,0.06-0.006,0.089v51.62l51.619,0c0.029-0.003,0.061-0.006,0.09-0.006 c0.656,0,1.285,0.132,1.861,0.371c0.014,0.005,0.025,0.011,0.037,0.017c0.584,0.248,1.107,0.603,1.543,1.039 c0.881,0.88,1.428,2.098,1.428,3.441c0,0.654-0.133,1.283-0.371,1.859c-0.248,0.6-0.609,1.137-1.057,1.583 c-0.445,0.445-0.98,0.806-1.58,1.055v0.001c-0.576,0.238-1.205,0.37-1.861,0.37c-0.029,0-0.061-0.002-0.09-0.006l-51.619,0.001 v51.619c0.004,0.029,0.006,0.06,0.006,0.09c0,0.656-0.133,1.286-0.371,1.861c-0.006,0.014-0.012,0.025-0.018,0.037 c-0.248,0.584-0.602,1.107-1.037,1.543c-0.883,0.882-2.1,1.427-3.443,1.427c-0.654,0-1.283-0.132-1.859-0.371 c-0.6-0.248-1.137-0.609-1.583-1.056c-0.445-0.444-0.806-0.98-1.055-1.58h-0.001c-0.239-0.575-0.371-1.205-0.371-1.861 c0-0.03,0.002-0.061,0.006-0.09V66.303H4.958c-0.029,0.004-0.059,0.006-0.09,0.006c-0.654,0-1.283-0.132-1.859-0.371 c-0.6-0.248-1.137-0.609-1.583-1.056c-0.445-0.445-0.806-0.98-1.055-1.58H0.371C0.132,62.726,0,62.097,0,61.44 c0-0.655,0.132-1.283,0.371-1.859c0.249-0.6,0.61-1.137,1.056-1.583c0.881-0.881,2.098-1.426,3.442-1.426 c0.031,0,0.061,0.002,0.09,0.006l51.62,0l0-51.62C56.575,4.928,56.573,4.898,56.573,4.868L56.573,4.868z" />
                               </svg>
@@ -174,8 +174,8 @@ if (!function_exists('render_product_cards')) {
                            type="button"
                            class="product-card__add-to-cart wp-block-button__link wp-element-button is-disabled out-of-stock"
                            disabled
-                           aria-label="<?php echo esc_attr__('Out of stock', 'akka'); ?>">
-                           <?php echo esc_html__('Out of stock', 'akka'); ?>
+                           aria-label="<?php echo esc_attr__('Out of stock', 'demo'); ?>">
+                           <?php echo esc_html__('Out of stock', 'demo'); ?>
                         </button>
                      <?php } ?>
                   </div>
@@ -223,13 +223,13 @@ $root_classes = trim(($attributes['mainClassName'] ?? 'filtered-products-section
       <div class="product-filter-backdrop" hidden></div>
       <aside id="product-filter-drawer" class="product-filter-container" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="product-filter-title">
          <div class="filter-panel">
-            <h2 id="product-filter-title" class="product-filter-title"><?= esc_html__('filter after', 'akka'); ?></h2>
-            <div class="filter-header" role="tablist" aria-label="<?= esc_attr__('Filter after', 'akka'); ?>">
-               <button <?= tabAttrs('needs', $active_taxonomy, __("Needs", "akka")); ?>><?= __("Needs", "akka"); ?></button>
+            <h2 id="product-filter-title" class="product-filter-title"><?= esc_html__('filter after', 'demo'); ?></h2>
+            <div class="filter-header" role="tablist" aria-label="<?= esc_attr__('Filter after', 'demo'); ?>">
+               <button <?= tabAttrs('needs', $active_taxonomy, __("Needs", "demo")); ?>><?= __("Needs", "demo"); ?></button>
                <div class="filter-header__button-separator" aria-hidden="true">/</div>
-               <button <?= tabAttrs('foci', $active_taxonomy, __("Focus", "akka")); ?>><?= __("Focus", "akka"); ?></button>
+               <button <?= tabAttrs('foci', $active_taxonomy, __("Focus", "demo")); ?>><?= __("Focus", "demo"); ?></button>
                <div class="filter-header__button-separator" aria-hidden="true">/</div>
-               <button <?= tabAttrs('product_cat', $active_taxonomy, __("Assortment", "akka")); ?>><?= __("Assortment", "akka"); ?></button>
+               <button <?= tabAttrs('product_cat', $active_taxonomy, __("Assortment", "demo")); ?>><?= __("Assortment", "demo"); ?></button>
             </div>
 
             <div class="filter-body">
@@ -263,7 +263,7 @@ $root_classes = trim(($attributes['mainClassName'] ?? 'filtered-products-section
             </div>
          </div>
          <div class="filter-footer">
-            <button class="product-filter-close wp-block-button__link wp-element-button" aria-label="<?= esc_attr__('Close filter', 'akka'); ?>">Filter</button>
+            <button class="product-filter-close wp-block-button__link wp-element-button" aria-label="<?= esc_attr__('Close filter', 'demo'); ?>">Filter</button>
          </div>
       </aside>
       <div class="swiper-products-divider"></div>
@@ -271,7 +271,7 @@ $root_classes = trim(($attributes['mainClassName'] ?? 'filtered-products-section
 
    <div class="swiper-products-container">
       <?php if (0) { ?>
-         <button class="product-filter-open wp-block-button__link wp-element-button"><?= __("Filter", "akka"); ?></button>
+         <button class="product-filter-open wp-block-button__link wp-element-button"><?= __("Filter", "demo"); ?></button>
       <?php } ?>
 
       <?php if ($is_grid) {

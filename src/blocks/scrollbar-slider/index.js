@@ -13,9 +13,9 @@ import metadata from './block.json';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType(metadata.name, {
-   title: __('Scrollbar Slider', 'akka'),
+   title: __('Scrollbar Slider', 'demo'),
    // ToDo: Change the description
-   description: __('En slider som visa post inlägg', 'akka'),
+   description: __('En slider som visa post inlägg', 'demo'),
    category: 'tiburon',
    icon: {
       src: (
