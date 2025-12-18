@@ -294,6 +294,7 @@ p {
    &:hover {
       background-color: #003c39 !important;
       border: none !important;
+      color: white !important;
    }
    > span {
       font-size: 17px !important;
@@ -302,4 +303,10 @@ p {
 
 .wc-block-components-product-price > span {
    font-size: 17px !important;
+}
+
+//FOOTER
+
+.footer-social-media a {
+   text-decoration: none !important;
 }
