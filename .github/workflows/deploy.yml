@@ -1,0 +1,140 @@
+# .github/workflows/deploy.yml
+name: Deployment (no marketplace actions)
+
+on:
+  push:
+    branches: [dev, live]
+
+permissions:
+  contents: read
+
+env:
+  DEV_ENV_FILE: .dev.env
+  LIVE_ENV_FILE: .live.env
+  SSH_KEY_PATH: /home/runner/.ssh/deploy_key
+  RSYNC_EXCLUDES: --exclude-from=.rsyncignore
+  RSYNC_FLAGS: --archive --verbose --compress --delete-after --human-readable
+
+jobs:
+  deploy:
+    # Use GitHub Environments so "dev" branch uses "dev" env, "live" uses "live" env
+    environment: ${{ github.ref_name }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Manual checkout (no actions/checkout)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          REPO="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          mkdir -p "$GITHUB_WORKSPACE"
+          cd "$GITHUB_WORKSPACE"
+          git init
+          git remote add origin "$REPO"
+          git fetch --depth=1 origin "${{ github.sha }}"
+          git checkout --force FETCH_HEAD
+          git submodule update --init --recursive --depth=1 || true
+
+      - name: 🔧 Prepare .env (per branch) and export vars
+        id: envfile
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH="${{ github.ref_name }}"
+          if [[ "$BRANCH" == "dev" ]]; then
+            ENV_FILE="$DEV_ENV_FILE"
+          elif [[ "$BRANCH" == "live" ]]; then
+            ENV_FILE="$LIVE_ENV_FILE"
+          else
+            echo "Unsupported branch: $BRANCH"; exit 1
+          fi
+
+          if [[ -f "$ENV_FILE" ]]; then
+            cp "$ENV_FILE" .env
+            # export to subsequent steps
+            while IFS='=' read -r key value; do
+              [[ -z "$key" || "$key" =~ ^\s*# ]] && continue
+              value="${value%$'\r'}"
+              echo "${key}=${value}" >> "$GITHUB_ENV"
+            done < <(grep -vE '^\s*#|^\s*$' .env)
+          else
+            echo "No $ENV_FILE found; relying on environment-scoped secrets."
+          fi
+
+      - name: 🔐 Setup SSH (no actions)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > "$SSH_KEY_PATH"
+          chmod 600 "$SSH_KEY_PATH"
+          : "${DEPLOY_HOST:?Missing DEPLOY_HOST (env or secret)}"
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: 📦 Composer install via Docker (composer:2)
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE":/work \
+            -w /work \
+            composer:2 \
+            install --no-dev --no-progress --prefer-dist --optimize-autoloader
+
+      - name: 📦 npm install via Docker (node:20)
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE":/work \
+            -w /work \
+            node:20 \
+            bash -lc 'if [ -f package-lock.json ]; then npm ci; else npm install; fi'
+
+      - name: 🛠 Build assets via Docker (node:20)
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE":/work \
+            -w /work \
+            node:20 \
+            bash -lc 'npm run theme:prod --if-present && npm run block:prod --if-present'
+
+      - name: 🧾 Debug working directory
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Contents:"
+          ls -la
+
+      - name: 📂 Rsync deploy (no actions)
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_USER:?Missing DEPLOY_USER}"
+          : "${DEPLOY_HOST:?Missing DEPLOY_HOST}"
+          : "${DEPLOY_PATH:?Missing DEPLOY_PATH}"
+
+          # Ensure rsync & ssh exist (they do on ubuntu-latest, but just in case)
+          sudo apt-get update -y && sudo apt-get install -y rsync openssh-client
+
+          rsync $RSYNC_FLAGS $RSYNC_EXCLUDES \
+            -e "ssh -i $SSH_KEY_PATH -o StrictHostKeyChecking=yes" \
+            ./ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH"
+
+      - name: 🧩 Remote composer dump-autoload
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_USER:?Missing DEPLOY_USER}"
+          : "${DEPLOY_HOST:?Missing DEPLOY_HOST}"
+          : "${DEPLOY_PATH:?Missing DEPLOY_PATH}"
+          ssh -i "$SSH_KEY_PATH" -o StrictHostKeyChecking=yes \
+            "$DEPLOY_USER@$DEPLOY_HOST" \
+            "cd '$DEPLOY_PATH' && composer dump-autoload -o"
+
+      - name: ✅ Done
+        run: echo "Deployment for branch '${{ github.ref_name }}' complete."

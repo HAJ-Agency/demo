@@ -1,0 +1,8 @@
+.git/
+node_modules/
+*.log
+deploy.yml
+.rsyncignore
+.gitignore
+.dev.env
+.live.env
