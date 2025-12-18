@@ -3,7 +3,7 @@ name: Deployment (no marketplace actions)
 
 on:
   push:
-    branches: [dev, live]
+    branches: [dev]
 
 permissions:
   contents: read
