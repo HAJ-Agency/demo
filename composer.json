@@ -12,9 +12,7 @@
          "includes/api/hapi.php",
          "includes/functions/faq.php",
          "includes/functions/post-type.php",
-         "includes/functions/reseller.php",
          "includes/functions/wc-taxonomies.php",
-         "includes/functions/ingredients.php",
          "includes/block-styles/core-button.php",
          "includes/wp-cli/init.php",
          "includes/woocommerce/init.php"

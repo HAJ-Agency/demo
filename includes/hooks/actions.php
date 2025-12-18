@@ -374,11 +374,8 @@ function demo_theme_init() {
    register_block_type(get_stylesheet_directory() . '/build/blocks/accordion');
    register_block_type(get_stylesheet_directory() . '/build/blocks/add-to-cart');
    register_block_type(get_stylesheet_directory() . '/build/blocks/filtered-products-section');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/ingredients-archive');
    register_block_type(get_stylesheet_directory() . '/build/blocks/off-canvas-shopping-cart');
    register_block_type(get_stylesheet_directory() . '/build/blocks/post-archive');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/reseller');
-   register_block_type(get_stylesheet_directory() . '/build/blocks/reseller-search-bar');
    register_block_type(get_stylesheet_directory() . '/build/blocks/scrollbar-slider');
    register_block_type(get_stylesheet_directory() . '/build/blocks/search');
    register_block_type(get_stylesheet_directory() . '/build/blocks/slider');

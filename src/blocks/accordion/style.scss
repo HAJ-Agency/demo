@@ -45,7 +45,7 @@
    }
    .wp-block-accordion__item {
       border-top: 1px solid #000;
-      border-top-color: var(--wp--preset--color--black);
+      border-top-color: var(--wp--preset--color--white);
       .wp-block-accordion__item-title {
          display: flex;
          justify-content: space-between;
@@ -115,7 +115,7 @@
          }
       }
       &:last-child {
-         border-bottom: 1px solid var(--wp--preset--color--black);
+         border-bottom: 1px solid var(--wp--preset--color--white);
       }
    }
 

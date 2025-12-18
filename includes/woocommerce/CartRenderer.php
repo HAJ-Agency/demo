@@ -30,11 +30,7 @@ class CartRenderer {
       }
    }
 
-   /** Current user is reseller? */
-   public static function is_reseller(): bool {
-      $uid = get_current_user_id();
-      return get_user_meta($uid, 'is_reseller', true) == "1";
-   }
+
 
    /**
     * Render only the cart ITEMS list (inner of #cart-items).
@@ -44,7 +40,6 @@ class CartRenderer {
       self::ensure_cart_loaded();
 
       $cart        = \WC()->cart ? \WC()->cart->get_cart() : [];
-      $is_reseller = self::is_reseller();
 
       ob_start();
 
@@ -169,9 +164,7 @@ class CartRenderer {
 
                   <div class="cart-drawer__price">
                      <p class="cart-drawer__price-main"><?php echo $line_price_html; ?></p>
-                     <?php if ($is_reseller): ?>
-                        <p class="cart-drawer__price-sub"><?php echo esc_html__('Exkl moms', 'tiburon'); ?></p>
-                     <?php endif; ?>
+                     <p class="cart-drawer__price-sub"><?php echo esc_html__('Exkl moms', 'tiburon'); ?></p>
                   </div>
                </div>
             </div>

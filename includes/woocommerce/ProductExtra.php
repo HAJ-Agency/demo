@@ -17,10 +17,10 @@ class ProductExtra {
    public function add_custom_text_field() {
       woocommerce_wp_textarea_input([
          'id' => '_extra_product_text',
-         'label' => __('Ingredients', 'your-text-domain'),
-         'placeholder' => "Ex: Järn - För blodbildning och syretransport\nVitamin A - För syn, immunförsvar och hud",
+         'label' => __('Extra text', 'your-text-domain'),
+         'placeholder' => "Skriv något",
          'desc_tip' => true,
-         'description' => __('Skriv ingredienser, en per rad.', 'your-text-domain'),
+         'description' => __('Skriv mer info', 'your-text-domain'),
       ]);
    }
 

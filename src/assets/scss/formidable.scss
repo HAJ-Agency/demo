@@ -158,8 +158,9 @@
    }
    .frm_button_submit {
       &:hover {
-         background-color: #00b21e !important;
-         border: 1px solid #00b21e !important;
+         background-color: #104542!important;
+         border: none !important;
+         color: white !important;
       }
    }
 }

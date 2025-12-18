@@ -29,17 +29,29 @@
    }
 }
 .wp-block-button.is-style-fill-black {
+   color: white !important;
    .wp-block-button__link {
+      border: none !important;
       &:hover,
       &:focus-visible {
-         background-color: transparent !important;
-         border-color: var(--wp--preset--color--black) !important;
-         color: var(--wp--preset--color--black) !important;
+         background-color: #003c39 !important;
+         border: none !important;
+         // color: #e4fb53 !important;
+         color: white !important;
       }
       &:active {
          background-color: var(--wp--preset--color--white) !important;
          border-color: var(--wp--preset--color--white) !important;
          color: var(--wp--preset--color--black) !important;
       }
+   }
+}
+
+.single_add_to_cart_button {
+   border: none !important;
+   &:hover {
+      // background-color: #e7aeae !important;
+      background-color: #003c39 !important;
+      color: white !important;
    }
 }

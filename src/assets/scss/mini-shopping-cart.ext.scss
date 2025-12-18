@@ -29,14 +29,21 @@
    text-decoration: none !important;
    font-size: 1.125rem !important;
    &:hover {
-      color: black;
+      color: #e4fb53;
    }
 }
 
 //checkout button
 .wc-block-components-button.wp-element-button.wp-block-woocommerce-mini-cart-checkout-button-block.wc-block-mini-cart__footer-checkout.contained {
-   background-color: black !important;
-   color: white !important;
+   background-color: #174845 003c39 !important;
+   color: #e4fb53 !important;
+   border: none !important;
+   &:hover {
+      background-color: #003c39 !important;
+      border: none !important;
+      color: white !important;
+      transition: .2s ease;
+   }
 }
 
 //total-price
@@ -52,6 +59,11 @@
 //picture
 .table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image img {
    width: 50px !important;
+}
+
+//Remove item
+.wc-block-cart-item__remove-link {
+   color: #e7aeae !important;
 }
 
 //picture
@@ -143,7 +155,7 @@
 
 //Border in footer
 .wp-block-woocommerce-mini-cart-footer-block.wc-block-mini-cart__footer::after {
-   border-top: 1px solid rgba(0, 0, 0, 0.3);
+   border-top: 1px solid #e4fb53;
    content: '';
    left: 5%;
    right: 5%;

@@ -20,24 +20,24 @@
                "color": "#000000"
             },
             {
-               "name": "Brown",
-               "slug": "brown",
-               "color": "#493221"
+               "name": "Medium green",
+               "slug": "medium-green",
+               "color": "#174845"
             },
             {
-               "name": "Pale green",
-               "slug": "pale-green",
-               "color": "#D2DCC7"
+               "name": "Lime green",
+               "slug": "lime-green",
+               "color": "#E4FB53"
+            },
+            {
+               "name": "Dusty pink",
+               "slug": "dusty-pink",
+               "color": "#E7AEAE"
             },
             {
                "name": "Dark green",
                "slug": "dark-green",
-               "color": "#00B21E"
-            },
-            {
-               "name": "Grey",
-               "slug": "grey",
-               "color": "#F5F5F5"
+               "color": "#003C39"
             }
          ]
       },
@@ -437,7 +437,7 @@
          "button": {
             "border": {
                "radius": "999px",
-               "color": "var:preset|color|black"
+               "color": "var:preset|color|none"
             },
             "typography": {
                "fontWeight": "400",
@@ -450,7 +450,7 @@
             },
             "color": {
                "background": "transparent",
-               "text": "var:preset|color|black"
+               "text": "var:preset|color|white"
             },
             "spacing": {
                "padding": {

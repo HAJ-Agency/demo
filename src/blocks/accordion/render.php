@@ -97,8 +97,8 @@ if (!function_exists('get_accordion_content')) {
                         <g id="c">
                             <g id="d">
                                 <path class="e" d="m15,2c7.17,0,13,5.83,13,13s-5.83,13-13,13S2,22.17,2,15,7.83,2,15,2m0-2C6.72,0,0,6.72,0,15s6.72,15,15,15,15-6.72,15-15S23.28,0,15,0h0Z" stroke-width="0px" />
-                                <line class="f" x1="10" y1="0" x2="10" y2="20" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2px" />
-                                <line class="g" x1="20" y1="10" x2="0" y2="10" fill="none" stroke="#000" stroke-linecap="round" stroke-width="2px" />
+                                <line class="f" x1="10" y1="0" x2="10" y2="20" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2px" />
+                                <line class="g" x1="20" y1="10" x2="0" y2="10" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2px" />
                             </g>
                         </g>
                     </svg>

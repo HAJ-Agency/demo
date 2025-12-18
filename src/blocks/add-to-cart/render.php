@@ -196,15 +196,6 @@ if ($is_variable) {
          <?php echo esc_html__('Läs mer', 'demo'); ?>
       </button> -->
    </div>
-   <?php
-   $extra_text = get_post_meta(get_the_ID(), '_extra_product_text', true);
-
-   if (!empty($extra_text)) {
-      echo '<div class="product-ingredients">';
-      echo '<p>' . nl2br(esc_html($extra_text)) . '</p>';
-      echo '</div>';
-   }
-   ?>
 
    <?php if ($is_variable && ! empty($variation_attributes)): ?>
       <div class="hapi-attrs" role="group" aria-label="<?php echo esc_attr__('Produktattribut', 'demo'); ?>">
